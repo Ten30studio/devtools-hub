@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "DevTools Hub - Free Developer Utilities",
   description:
-    "JSON formatter, Base64 encoder, JWT decoder, hash generator, regex tester, timestamp converter, color converter, and more. Free online developer tools that run entirely in your browser.",
+    "JSON formatter, Base64 encoder, JWT decoder, hash generator, regex tester, UUID generator, lorem ipsum generator, markdown preview, diff checker, and more. Free online developer tools that run entirely in your browser.",
   keywords: [
     "developer tools",
     "json formatter",
@@ -26,6 +26,10 @@ export const metadata: Metadata = {
     "regex tester",
     "timestamp converter",
     "color converter",
+    "uuid generator",
+    "lorem ipsum generator",
+    "markdown preview",
+    "text diff checker",
     "online dev tools",
     "free developer utilities",
   ],
@@ -54,6 +58,10 @@ const tools = [
   { name: "Regex", href: "/regex" },
   { name: "Timestamp", href: "/timestamp" },
   { name: "Color", href: "/color" },
+  { name: "UUID", href: "/uuid" },
+  { name: "Lorem", href: "/lorem" },
+  { name: "Markdown", href: "/markdown" },
+  { name: "Diff", href: "/diff" },
 ];
 
 export default function RootLayout({

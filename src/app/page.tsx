@@ -41,6 +41,26 @@ const tools = [
     desc: "Convert between HEX, RGB, and HSL color formats",
     href: "/color",
   },
+  {
+    name: "UUID Generator",
+    desc: "Generate random UUIDs (v4) in bulk",
+    href: "/uuid",
+  },
+  {
+    name: "Lorem Ipsum Generator",
+    desc: "Generate placeholder text for designs and layouts",
+    href: "/lorem",
+  },
+  {
+    name: "Markdown Preview",
+    desc: "Write markdown and see a live rendered preview",
+    href: "/markdown",
+  },
+  {
+    name: "Text Diff Checker",
+    desc: "Compare two texts and see line-by-line differences",
+    href: "/diff",
+  },
 ];
 
 export default function Home() {
