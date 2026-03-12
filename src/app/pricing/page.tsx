@@ -1,7 +1,6 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 const plans = [
@@ -10,14 +9,13 @@ const plans = [
     price: "$0",
     period: "forever",
     features: [
-      "All web-based tools",
+      "All 8 web-based tools",
       "100 API requests / hour",
       "Community support",
     ],
     cta: "Get Started",
     ctaHref: "/docs",
     highlighted: false,
-    checkout: false,
   },
   {
     name: "Pro",
@@ -30,10 +28,9 @@ const plans = [
       "API key management",
       "Usage analytics",
     ],
-    cta: "Get Pro API Key",
-    ctaHref: "#",
+    cta: "Join Waitlist",
+    ctaHref: null,
     highlighted: true,
-    checkout: true,
   },
   {
     name: "Enterprise",
@@ -47,47 +44,28 @@ const plans = [
       "Custom tools & integrations",
     ],
     cta: "Contact Us",
-    ctaHref: "mailto:sales@devtoolshub.com?subject=Enterprise",
+    ctaHref: "mailto:sales@devtoolshub.com?subject=Enterprise%20Inquiry",
     highlighted: false,
-    checkout: false,
   },
 ];
 
-function PricingContent() {
-  const searchParams = useSearchParams();
-  const [loading, setLoading] = useState(false);
-  const success = searchParams.get("success");
-  const cancelled = searchParams.get("cancelled");
+export default function PricingPage() {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
-  async function handleCheckout() {
-    setLoading(true);
-    try {
-      const res = await fetch("/api/checkout", { method: "POST" });
-      const data = await res.json();
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        alert(data.error || "Checkout unavailable");
-      }
-    } catch {
-      alert("Something went wrong");
-    } finally {
-      setLoading(false);
-    }
+  function handleWaitlist(e: React.FormEvent) {
+    e.preventDefault();
+    if (!email) return;
+    // Store in localStorage as a simple waitlist until we have a backend
+    const waitlist = JSON.parse(localStorage.getItem("dtb_waitlist") || "[]");
+    waitlist.push({ email, ts: Date.now() });
+    localStorage.setItem("dtb_waitlist", JSON.stringify(waitlist));
+    setSubmitted(true);
+    setEmail("");
   }
 
   return (
     <div className="py-16">
-      {success && (
-        <div className="mb-8 p-4 rounded-lg bg-green-500/10 border border-green-500/30 text-center text-green-400">
-          Payment successful. Your Pro API key will be emailed shortly.
-        </div>
-      )}
-      {cancelled && (
-        <div className="mb-8 p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/30 text-center text-yellow-400">
-          Checkout cancelled. No charge was made.
-        </div>
-      )}
       <div className="text-center mb-16">
         <h1 className="text-3xl font-bold mb-4">Simple, Transparent Pricing</h1>
         <p className="text-muted text-lg max-w-xl mx-auto">
@@ -119,14 +97,29 @@ function PricingContent() {
                 </li>
               ))}
             </ul>
-            {plan.checkout ? (
-              <button
-                onClick={handleCheckout}
-                disabled={loading}
-                className="block text-center py-2.5 rounded-lg text-sm font-medium transition-colors bg-accent hover:bg-accent-hover text-white disabled:opacity-50"
-              >
-                {loading ? "Redirecting..." : plan.cta}
-              </button>
+            {plan.ctaHref === null ? (
+              submitted ? (
+                <div className="text-center py-2.5 rounded-lg text-sm font-medium bg-green-500/10 border border-green-500/30 text-green-400">
+                  You're on the list.
+                </div>
+              ) : (
+                <form onSubmit={handleWaitlist} className="flex flex-col gap-2">
+                  <input
+                    type="email"
+                    placeholder="you@company.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="px-3 py-2 rounded-lg text-sm bg-background border border-border focus:border-accent focus:outline-none"
+                  />
+                  <button
+                    type="submit"
+                    className="py-2.5 rounded-lg text-sm font-medium transition-colors bg-accent hover:bg-accent-hover text-white"
+                  >
+                    {plan.cta}
+                  </button>
+                </form>
+              )
             ) : (
               <Link
                 href={plan.ctaHref}
@@ -142,14 +135,9 @@ function PricingContent() {
           </div>
         ))}
       </div>
+      <div className="mt-12 text-center text-muted text-sm">
+        Pro API access launching soon. Join the waitlist to get early access and a discount.
+      </div>
     </div>
-  );
-}
-
-export default function PricingPage() {
-  return (
-    <Suspense>
-      <PricingContent />
-    </Suspense>
   );
 }

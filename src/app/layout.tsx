@@ -16,7 +16,33 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "DevTools Hub - Free Developer Utilities",
   description:
-    "JSON formatter, Base64 encoder, JWT decoder, hash generator, regex tester, and more. Free online developer tools.",
+    "JSON formatter, Base64 encoder, JWT decoder, hash generator, regex tester, timestamp converter, color converter, and more. Free online developer tools that run entirely in your browser.",
+  keywords: [
+    "developer tools",
+    "json formatter",
+    "base64 encoder",
+    "jwt decoder",
+    "hash generator",
+    "regex tester",
+    "timestamp converter",
+    "color converter",
+    "online dev tools",
+    "free developer utilities",
+  ],
+  openGraph: {
+    title: "DevTools Hub - Free Developer Utilities",
+    description:
+      "Free, fast, client-side developer utilities. No sign-up, no tracking, no data leaves your browser.",
+    type: "website",
+    url: "https://ten30studio.github.io/devtools-hub/",
+    siteName: "DevTools Hub",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DevTools Hub - Free Developer Utilities",
+    description:
+      "Free, fast, client-side developer utilities. No sign-up, no tracking.",
+  },
 };
 
 const tools = [
@@ -26,6 +52,8 @@ const tools = [
   { name: "JWT", href: "/jwt" },
   { name: "Hash", href: "/hash" },
   { name: "Regex", href: "/regex" },
+  { name: "Timestamp", href: "/timestamp" },
+  { name: "Color", href: "/color" },
 ];
 
 export default function RootLayout({

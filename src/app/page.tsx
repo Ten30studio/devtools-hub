@@ -31,6 +31,16 @@ const tools = [
     desc: "Test regular expressions with real-time matching",
     href: "/regex",
   },
+  {
+    name: "Timestamp Converter",
+    desc: "Convert Unix timestamps to dates and back",
+    href: "/timestamp",
+  },
+  {
+    name: "Color Converter",
+    desc: "Convert between HEX, RGB, and HSL color formats",
+    href: "/color",
+  },
 ];
 
 export default function Home() {

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ten30studio.github.io/devtools-hub/sitemap.xml
