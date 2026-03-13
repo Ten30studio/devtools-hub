@@ -71,6 +71,16 @@ const tools = [
     desc: "Generate strong, cryptographically random passwords",
     href: "/password",
   },
+  {
+    name: "QR Code Generator",
+    desc: "Generate QR codes from text or URLs with custom sizes",
+    href: "/qrcode",
+  },
+  {
+    name: "YAML ↔ JSON Converter",
+    desc: "Convert between YAML and JSON formats instantly",
+    href: "/yaml",
+  },
 ];
 
 export default function Home() {

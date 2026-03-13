@@ -62,6 +62,10 @@ const tools = [
   { name: "Lorem", href: "/lorem" },
   { name: "Markdown", href: "/markdown" },
   { name: "Diff", href: "/diff" },
+  { name: "Cron", href: "/cron" },
+  { name: "Password", href: "/password" },
+  { name: "QR Code", href: "/qrcode" },
+  { name: "YAML", href: "/yaml" },
 ];
 
 export default function RootLayout({

@@ -9,7 +9,7 @@ const plans = [
     price: "$0",
     period: "forever",
     features: [
-      "All 8 web-based tools",
+      "All 16 web-based tools",
       "100 API requests / hour",
       "Community support",
     ],
