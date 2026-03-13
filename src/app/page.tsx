@@ -61,6 +61,16 @@ const tools = [
     desc: "Compare two texts and see line-by-line differences",
     href: "/diff",
   },
+  {
+    name: "Cron Expression Parser",
+    desc: "Parse cron expressions with descriptions and next run times",
+    href: "/cron",
+  },
+  {
+    name: "Password Generator",
+    desc: "Generate strong, cryptographically random passwords",
+    href: "/password",
+  },
 ];
 
 export default function Home() {
