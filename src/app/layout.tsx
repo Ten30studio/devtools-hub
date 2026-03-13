@@ -106,14 +106,29 @@ export default function RootLayout({
               </Link>
               <Link
                 href="/pricing"
-                className="px-3 py-1.5 rounded-md text-sm font-medium text-accent hover:bg-accent/10 transition-colors"
+                className="px-3 py-1.5 rounded-md text-sm text-muted hover:text-foreground hover:bg-surface-hover transition-colors"
               >
                 Pricing
+              </Link>
+              <Link
+                href="/sponsor"
+                className="px-3 py-1.5 rounded-md text-sm font-medium text-accent hover:bg-accent/10 transition-colors"
+              >
+                Sponsor
               </Link>
             </div>
           </div>
         </nav>
         <main className="max-w-6xl mx-auto px-4 py-8">{children}</main>
+        <footer className="border-t border-border mt-16 py-8 text-center text-sm text-muted">
+          <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>DevTools Hub by <a href="https://github.com/Ten30studio" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Ten30 Studio</a></p>
+            <div className="flex gap-4">
+              <Link href="/sponsor" className="text-accent hover:underline font-medium">Support this project</Link>
+              <a href="https://github.com/Ten30studio/devtools-hub" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">GitHub</a>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );

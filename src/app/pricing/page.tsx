@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
 
 const plans = [
@@ -28,8 +25,8 @@ const plans = [
       "API key management",
       "Usage analytics",
     ],
-    cta: "Join Waitlist",
-    ctaHref: null,
+    cta: "Get Pro Access",
+    ctaHref: "/sponsor",
     highlighted: true,
   },
   {
@@ -50,20 +47,6 @@ const plans = [
 ];
 
 export default function PricingPage() {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleWaitlist(e: React.FormEvent) {
-    e.preventDefault();
-    if (!email) return;
-    // Store in localStorage as a simple waitlist until we have a backend
-    const waitlist = JSON.parse(localStorage.getItem("dtb_waitlist") || "[]");
-    waitlist.push({ email, ts: Date.now() });
-    localStorage.setItem("dtb_waitlist", JSON.stringify(waitlist));
-    setSubmitted(true);
-    setEmail("");
-  }
-
   return (
     <div className="py-16">
       <div className="text-center mb-16">
@@ -97,46 +80,25 @@ export default function PricingPage() {
                 </li>
               ))}
             </ul>
-            {plan.ctaHref === null ? (
-              submitted ? (
-                <div className="text-center py-2.5 rounded-lg text-sm font-medium bg-green-500/10 border border-green-500/30 text-green-400">
-                  You're on the list.
-                </div>
-              ) : (
-                <form onSubmit={handleWaitlist} className="flex flex-col gap-2">
-                  <input
-                    type="email"
-                    placeholder="you@company.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="px-3 py-2 rounded-lg text-sm bg-background border border-border focus:border-accent focus:outline-none"
-                  />
-                  <button
-                    type="submit"
-                    className="py-2.5 rounded-lg text-sm font-medium transition-colors bg-accent hover:bg-accent-hover text-white"
-                  >
-                    {plan.cta}
-                  </button>
-                </form>
-              )
-            ) : (
-              <Link
-                href={plan.ctaHref}
-                className={`block text-center py-2.5 rounded-lg text-sm font-medium transition-colors ${
-                  plan.highlighted
-                    ? "bg-accent hover:bg-accent-hover text-white"
-                    : "bg-surface-hover hover:bg-border text-foreground"
-                }`}
-              >
-                {plan.cta}
-              </Link>
-            )}
+            <Link
+              href={plan.ctaHref}
+              className={`block text-center py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                plan.highlighted
+                  ? "bg-accent hover:bg-accent-hover text-white"
+                  : "bg-surface-hover hover:bg-border text-foreground"
+              }`}
+            >
+              {plan.cta}
+            </Link>
           </div>
         ))}
       </div>
       <div className="mt-12 text-center text-muted text-sm">
-        Pro API access launching soon. Join the waitlist to get early access and a discount.
+        Support DevTools Hub development.{" "}
+        <Link href="/sponsor" className="text-accent hover:underline">
+          Become a sponsor
+        </Link>{" "}
+        and get Pro access.
       </div>
     </div>
   );
