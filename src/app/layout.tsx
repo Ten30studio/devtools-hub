@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "DevTools Hub - Free Developer Utilities",
   description:
-    "JSON formatter, Base64 encoder, JWT decoder, hash generator, regex tester, UUID generator, lorem ipsum generator, markdown preview, diff checker, and more. Free online developer tools that run entirely in your browser.",
+    "19 free developer tools: JSON formatter, Base64 encoder, JWT decoder, CSS gradient generator, JSON to TypeScript, HTML entity encoder, and more. Runs entirely in your browser.",
   keywords: [
     "developer tools",
     "json formatter",
@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     "lorem ipsum generator",
     "markdown preview",
     "text diff checker",
+    "css gradient generator",
+    "html entity encoder",
+    "json to typescript",
     "online dev tools",
     "free developer utilities",
   ],
@@ -38,7 +41,7 @@ export const metadata: Metadata = {
     description:
       "Free, fast, client-side developer utilities. No sign-up, no tracking, no data leaves your browser.",
     type: "website",
-    url: "https://ten30studio.github.io/devtools-hub/",
+    url: "https://devtools-hub-ten.vercel.app",
     siteName: "DevTools Hub",
   },
   twitter: {
@@ -66,6 +69,9 @@ const tools = [
   { name: "Password", href: "/password" },
   { name: "QR Code", href: "/qrcode" },
   { name: "YAML", href: "/yaml" },
+  { name: "Gradient", href: "/gradient" },
+  { name: "HTML", href: "/html-entities" },
+  { name: "JSON→TS", href: "/json-to-ts" },
 ];
 
 export default function RootLayout({

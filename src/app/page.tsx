@@ -81,6 +81,21 @@ const tools = [
     desc: "Convert between YAML and JSON formats instantly",
     href: "/yaml",
   },
+  {
+    name: "CSS Gradient Generator",
+    desc: "Create beautiful CSS gradients with a visual editor",
+    href: "/gradient",
+  },
+  {
+    name: "HTML Entity Encoder",
+    desc: "Encode and decode HTML entities and special characters",
+    href: "/html-entities",
+  },
+  {
+    name: "JSON to TypeScript",
+    desc: "Convert JSON objects to TypeScript interfaces instantly",
+    href: "/json-to-ts",
+  },
 ];
 
 export default function Home() {
