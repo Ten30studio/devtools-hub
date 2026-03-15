@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
+import { validateApiKey } from "./api-keys";
 
 const RATE_LIMITS = {
   free: { requests: 100, windowMs: 60 * 60 * 1000 },
-  paid: { requests: 10000, windowMs: 60 * 60 * 1000 },
+  pro: { requests: 10000, windowMs: 60 * 60 * 1000 },
 };
 
 const rateLimitStore = new Map<string, { count: number; resetAt: number }>();
@@ -16,7 +17,7 @@ function getRateLimitKey(req: NextRequest, apiKey: string | null): string {
 
 function checkRateLimit(
   key: string,
-  tier: "free" | "paid"
+  tier: "free" | "pro"
 ): { allowed: boolean; remaining: number; resetAt: number } {
   const limit = RATE_LIMITS[tier];
   const now = Date.now();
@@ -40,26 +41,26 @@ function checkRateLimit(
   };
 }
 
-function validateApiKey(key: string): boolean {
-  const validKeys = process.env.API_KEYS?.split(",").map((k) => k.trim()) || [];
-  return validKeys.includes(key);
-}
-
 export function withApiAuth(
   handler: (req: NextRequest) => Promise<NextResponse>
 ) {
   return async (req: NextRequest): Promise<NextResponse> => {
-    const apiKey = req.headers.get("x-api-key");
-    const tier = apiKey && validateApiKey(apiKey) ? "paid" : "free";
+    const apiKeyHeader = req.headers.get("x-api-key");
 
-    if (apiKey && tier === "free") {
-      return NextResponse.json(
-        { error: { code: "INVALID_API_KEY", message: "Invalid API key" } },
-        { status: 401 }
-      );
+    let tier: "free" | "pro" = "free";
+
+    if (apiKeyHeader) {
+      const keyResult = validateApiKey(apiKeyHeader);
+      if (!keyResult.valid) {
+        return NextResponse.json(
+          { error: { code: "INVALID_API_KEY", message: "Invalid API key. Generate one at /api-keys" } },
+          { status: 401 }
+        );
+      }
+      tier = keyResult.tier as "free" | "pro";
     }
 
-    const rateLimitKey = getRateLimitKey(req, tier === "paid" ? apiKey : null);
+    const rateLimitKey = getRateLimitKey(req, apiKeyHeader || null);
     const { allowed, remaining, resetAt } = checkRateLimit(rateLimitKey, tier);
 
     if (!allowed) {
@@ -67,7 +68,8 @@ export function withApiAuth(
         {
           error: {
             code: "RATE_LIMITED",
-            message: `Rate limit exceeded. Resets at ${new Date(resetAt).toISOString()}`,
+            message: `Rate limit exceeded (${tier} tier: ${RATE_LIMITS[tier].requests}/hr). Resets at ${new Date(resetAt).toISOString()}`,
+            upgrade: tier === "free" ? "Get a Pro key for 10,000 req/hr at /pricing" : undefined,
           },
         },
         { status: 429 }

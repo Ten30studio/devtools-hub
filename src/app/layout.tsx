@@ -105,10 +105,16 @@ export default function RootLayout({
             </div>
             <div className="ml-auto flex gap-1">
               <Link
+                href="/api-keys"
+                className="px-3 py-1.5 rounded-md text-sm text-muted hover:text-foreground hover:bg-surface-hover transition-colors"
+              >
+                API Keys
+              </Link>
+              <Link
                 href="/docs"
                 className="px-3 py-1.5 rounded-md text-sm text-muted hover:text-foreground hover:bg-surface-hover transition-colors"
               >
-                API Docs
+                Docs
               </Link>
               <Link
                 href="/pricing"

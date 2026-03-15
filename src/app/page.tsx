@@ -125,17 +125,42 @@ export default function Home() {
           </Link>
         ))}
       </div>
-      <div className="mt-16 text-center border-t border-border pt-8">
-        <h2 className="text-xl font-semibold mb-3">Need these tools via API?</h2>
-        <p className="text-muted text-sm mb-4">
-          Access all tools programmatically. 100 free requests/hour.
-        </p>
-        <Link
-          href="/docs"
-          className="inline-block px-6 py-2.5 bg-accent hover:bg-accent-hover text-white rounded-lg text-sm font-medium transition-colors"
-        >
-          View API Docs
-        </Link>
+      <div className="mt-16 border-t border-border pt-12">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold mb-3">Built for AI Agents &amp; Automation</h2>
+          <p className="text-muted text-sm max-w-xl mx-auto">
+            Every tool available as a REST API. Generate a free API key and integrate
+            into your agent workflows, CI/CD pipelines, or automation systems.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-8">
+          <div className="text-center p-4">
+            <div className="text-2xl font-bold text-accent">19+</div>
+            <div className="text-sm text-muted">API Endpoints</div>
+          </div>
+          <div className="text-center p-4">
+            <div className="text-2xl font-bold text-accent">100/hr</div>
+            <div className="text-sm text-muted">Free Requests</div>
+          </div>
+          <div className="text-center p-4">
+            <div className="text-2xl font-bold text-accent">&lt;50ms</div>
+            <div className="text-sm text-muted">Avg Response</div>
+          </div>
+        </div>
+        <div className="flex justify-center gap-3">
+          <Link
+            href="/api-keys"
+            className="inline-block px-6 py-2.5 bg-accent hover:bg-accent-hover text-white rounded-lg text-sm font-medium transition-colors"
+          >
+            Get API Key
+          </Link>
+          <Link
+            href="/docs"
+            className="inline-block px-6 py-2.5 bg-surface hover:bg-surface-hover border border-border rounded-lg text-sm font-medium transition-colors"
+          >
+            View API Docs
+          </Link>
+        </div>
       </div>
     </div>
   );
