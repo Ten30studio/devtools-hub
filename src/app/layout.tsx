@@ -134,9 +134,10 @@ export default function RootLayout({
         <main className="max-w-6xl mx-auto px-4 py-8">{children}</main>
         <footer className="border-t border-border mt-16 py-8 text-center text-sm text-muted">
           <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>DevTools Hub by <a href="https://github.com/Ten30studio" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Ten30 Studio</a></p>
+            <p>Made by <a href="https://ten30studio.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline font-medium">Ten30 Studios</a> · A small studio in Arlington, TX</p>
             <div className="flex gap-4">
               <Link href="/sponsor" className="text-accent hover:underline font-medium">Support this project</Link>
+              <a href="https://ten30studio.com/ai" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">More from Ten30</a>
               <a href="https://github.com/Ten30studio/devtools-hub" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">GitHub</a>
             </div>
           </div>
