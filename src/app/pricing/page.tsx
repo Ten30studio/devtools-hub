@@ -41,7 +41,7 @@ const plans = [
       "Custom tools & integrations",
     ],
     cta: "Contact Us",
-    ctaHref: "mailto:sales@devtoolshub.com?subject=Enterprise%20Inquiry",
+    ctaHref: "mailto:admin@ten30studio.com?subject=DevTools%20Hub%20-%20Enterprise",
     highlighted: false,
   },
 ];
