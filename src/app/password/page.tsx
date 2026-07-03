@@ -66,7 +66,11 @@ export default function PasswordPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-6">Password Generator</h1>
+      <h1 className="text-2xl font-bold mb-3">Password Generator</h1>
+      <p className="text-sm text-muted mb-6">
+        Generated in your browser with the Web Crypto API
+        (<code className="font-mono text-xs">crypto.getRandomValues</code>). Nothing is sent to a server.
+      </p>
 
       <div className="bg-surface border border-border rounded-xl p-4 mb-4 space-y-4">
         <div className="flex items-center gap-4">

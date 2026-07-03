@@ -44,7 +44,12 @@ export default function JwtPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-6">JWT Decoder</h1>
+      <h1 className="text-2xl font-bold mb-3">JWT Decoder</h1>
+      <p className="text-sm text-muted mb-6">
+        Decodes the header and payload locally so you can inspect a token. It does{" "}
+        <span className="text-foreground">not</span> verify the signature, so decoding a
+        token doesn&apos;t prove it&apos;s authentic.
+      </p>
       <div className="mb-4">
         <label className="block text-sm text-muted mb-2">Paste JWT</label>
         <textarea

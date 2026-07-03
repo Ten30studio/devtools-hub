@@ -48,7 +48,7 @@ export default function PricingPage() {
   return (
     <div className="py-16">
       <div className="text-center mb-16">
-        <h1 className="text-3xl font-bold mb-4">Simple, Transparent Pricing</h1>
+        <h1 className="text-3xl font-bold mb-4">Pricing</h1>
         <p className="text-muted text-lg max-w-xl mx-auto">
           Free tools for everyone. Pay only when you need high-volume API access.
         </p>

@@ -78,12 +78,12 @@ const tools = [
   },
   {
     name: "YAML ↔ JSON Converter",
-    desc: "Convert between YAML and JSON formats instantly",
+    desc: "Convert between YAML and JSON formats",
     href: "/yaml",
   },
   {
     name: "CSS Gradient Generator",
-    desc: "Create beautiful CSS gradients with a visual editor",
+    desc: "Create CSS gradients with a live visual editor",
     href: "/gradient",
   },
   {
@@ -93,7 +93,7 @@ const tools = [
   },
   {
     name: "JSON to TypeScript",
-    desc: "Convert JSON objects to TypeScript interfaces instantly",
+    desc: "Convert JSON objects to TypeScript interfaces",
     href: "/json-to-ts",
   },
 ];
@@ -103,8 +103,8 @@ export default function Home() {
     <div className="py-16">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold mb-4">
-          Developer Tools,{" "}
-          <span className="text-accent">Instantly</span>
+          Developer tools that run{" "}
+          <span className="text-accent">in your browser</span>
         </h1>
         <p className="text-muted text-lg max-w-xl mx-auto">
           Free, fast, client-side developer utilities. No sign-up, no tracking,
