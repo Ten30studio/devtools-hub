@@ -25,28 +25,28 @@ export default function TermsPage() {
       <section className="space-y-3">
         <h2 className="text-xl font-bold text-foreground">What we offer</h2>
         <ul className="list-disc pl-6 space-y-1 text-foreground">
-          <li><strong>Free in-browser tools</strong> — 19 developer utilities (JSON, Base64, JWT, etc.) that run entirely client-side</li>
-          <li><strong>Free API tier</strong> — 100 requests / hour for casual automation</li>
-          <li><strong>Pro subscription</strong> — $9 / month for 10,000 requests / hour plus API key management and priority support</li>
+          <li><strong>Free in-browser tools</strong>: 19 developer utilities (JSON, Base64, JWT, etc.) that run entirely client-side</li>
+          <li><strong>Free API tier</strong>: 100 requests / hour for casual automation</li>
+          <li><strong>Pro subscription</strong>: $9 / month for 10,000 requests / hour plus API key management and priority support</li>
         </ul>
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-xl font-bold text-foreground">Free tier — "as is", no SLA</h2>
+        <h2 className="text-xl font-bold text-foreground">Free tier, "as is", no SLA</h2>
         <p className="text-foreground leading-relaxed">
           Free tools and the free API tier are provided "as is" and "as available", without warranties of any kind and without any uptime, availability, or performance guarantee. We may rate-limit, suspend, or remove free-tier access at any time for any reason, including operational, security, or abuse-prevention reasons.
         </p>
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-xl font-bold text-foreground">Pro subscription — billing &amp; cancellation</h2>
+        <h2 className="text-xl font-bold text-foreground">Pro subscription, billing &amp; cancellation</h2>
         <ul className="list-disc pl-6 space-y-1 text-foreground">
-          <li><strong>Billing</strong> — $9 USD per month, billed in advance at the start of each cycle via Stripe</li>
-          <li><strong>Auto-renewal</strong> — subscriptions auto-renew until cancelled</li>
-          <li><strong>Cancellation</strong> — cancel any time from your account (or by emailing <a href="mailto:admin@ten30studio.com" className="text-accent hover:underline">admin@ten30studio.com</a>); cancellation takes effect at the end of the current billing cycle, and you retain Pro access until then</li>
-          <li><strong>Refunds</strong> — partial-month refunds are not provided as standard. If you cancel within 7 days of your first Pro charge and have not made meaningful use of the Pro quota, we will refund the first month on request</li>
-          <li><strong>Failed payments</strong> — Stripe will retry. After 14 days of failed retries, the subscription is cancelled and the account is downgraded to free tier</li>
-          <li><strong>Price changes</strong> — at least 30 days' email notice before any price change; you may cancel before the new price takes effect</li>
+          <li><strong>Billing</strong>: $9 USD per month, billed in advance at the start of each cycle via Stripe</li>
+          <li><strong>Auto-renewal</strong>: subscriptions auto-renew until cancelled</li>
+          <li><strong>Cancellation</strong>: cancel any time from your account (or by emailing <a href="mailto:admin@ten30studio.com" className="text-accent hover:underline">admin@ten30studio.com</a>); cancellation takes effect at the end of the current billing cycle, and you retain Pro access until then</li>
+          <li><strong>Refunds</strong>: partial-month refunds are not provided as standard. If you cancel within 7 days of your first Pro charge and have not made meaningful use of the Pro quota, we will refund the first month on request</li>
+          <li><strong>Failed payments</strong>: Stripe will retry. After 14 days of failed retries, the subscription is cancelled and the account is downgraded to free tier</li>
+          <li><strong>Price changes</strong>: at least 30 days' email notice before any price change; you may cancel before the new price takes effect</li>
         </ul>
       </section>
 
@@ -88,7 +88,7 @@ export default function TermsPage() {
       <section className="space-y-3">
         <h2 className="text-xl font-bold text-foreground">No warranty &amp; limitation of liability</h2>
         <p className="text-foreground leading-relaxed">
-          The service is provided "as is" and "as available", without warranties of any kind, express or implied. We do not warrant the service will be uninterrupted, error-free, or fit for any particular purpose. To the fullest extent permitted by law, our total liability for any claim relating to DevTools Hub is limited to the amount you paid us in the 12 months preceding the claim. We are not liable for indirect, incidental, consequential, or special damages — including loss of data, revenue, or business.
+          The service is provided "as is" and "as available", without warranties of any kind, express or implied. We do not warrant the service will be uninterrupted, error-free, or fit for any particular purpose. To the fullest extent permitted by law, our total liability for any claim relating to DevTools Hub is limited to the amount you paid us in the 12 months preceding the claim. We are not liable for indirect, incidental, consequential, or special damages, including loss of data, revenue, or business.
         </p>
         <p className="text-foreground leading-relaxed">
           Nothing in these terms excludes or limits liability that cannot be excluded under applicable law.
@@ -132,7 +132,7 @@ export default function TermsPage() {
       </section>
 
       <div className="bg-surface border border-border p-4 text-sm text-muted">
-        <strong className="text-foreground">Draft notice:</strong> these terms are drafted by Ten30 to reflect how DevTools Hub currently operates. They are a starting point, not legal advice — have them reviewed by a qualified attorney before relying on them.
+        <strong className="text-foreground">Draft notice:</strong> these terms are drafted by Ten30 to reflect how DevTools Hub currently operates. They are a starting point, not legal advice. Have them reviewed by a qualified attorney before relying on them.
       </div>
 
       <p className="text-sm text-muted pt-4">

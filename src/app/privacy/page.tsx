@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - DevTools Hub",
-  description: "How DevTools Hub collects, uses, and protects your information. Most free tools run entirely in your browser — no data leaves your device.",
+  description: "How DevTools Hub collects, uses, and protects your information. Most free tools run entirely in your browser, no data leaves your device.",
   robots: { index: false, follow: false },
 };
 
@@ -30,9 +30,9 @@ export default function PrivacyPage() {
       </div>
 
       <section className="space-y-3">
-        <h2 className="text-xl font-bold text-foreground">Free tools — no data leaves your browser</h2>
+        <h2 className="text-xl font-bold text-foreground">Free tools, no data leaves your browser</h2>
         <p className="text-foreground leading-relaxed">
-          All 19 utilities (JSON, Base64, JWT, Hash, Regex, Timestamp, Color, UUID, Lorem, Markdown, Diff, Cron, Password, QR Code, YAML, Gradient, HTML Entities, JSON→TS, URL) run entirely client-side in your browser. Whatever you paste — JWTs, JSON payloads, passwords, URLs — stays on your device. We do not collect, transmit, store, or analyse the content you put into the tools.
+          All 19 utilities (JSON, Base64, JWT, Hash, Regex, Timestamp, Color, UUID, Lorem, Markdown, Diff, Cron, Password, QR Code, YAML, Gradient, HTML Entities, JSON→TS, URL) run entirely client-side in your browser. Whatever you paste, JWTs, JSON payloads, passwords, URLs, stays on your device. We do not collect, transmit, store, or analyse the content you put into the tools.
         </p>
       </section>
 
@@ -42,9 +42,9 @@ export default function PrivacyPage() {
           To use the DevTools Hub API for high-volume automation, you create an account and an HMAC-signed API key. We collect:
         </p>
         <ul className="list-disc pl-6 space-y-1 text-foreground">
-          <li><strong>Email address</strong> — for account identification, billing receipts, and security alerts</li>
-          <li><strong>API key metadata</strong> — key prefix, creation date, last-used timestamp, rate-limit usage (we never store the full key plaintext after creation — only a hash for verification)</li>
-          <li><strong>API request metadata</strong> — timestamps, endpoint called, response status, originating IP (for rate-limiting and abuse detection; not the request body)</li>
+          <li><strong>Email address</strong>: for account identification, billing receipts, and security alerts</li>
+          <li><strong>API key metadata</strong>: key prefix, creation date, last-used timestamp, rate-limit usage (we never store the full key plaintext after creation, only a hash for verification)</li>
+          <li><strong>API request metadata</strong>: timestamps, endpoint called, response status, originating IP (for rate-limiting and abuse detection; not the request body)</li>
         </ul>
       </section>
 
@@ -58,7 +58,7 @@ export default function PrivacyPage() {
       <section className="space-y-3">
         <h2 className="text-xl font-bold text-foreground">Hosting logs</h2>
         <p className="text-foreground leading-relaxed">
-          Vercel (our hosting provider) records standard request metadata — IP address, user agent, request path, response status, timestamp — for security and operational reasons. Logs are retained per Vercel's defaults.
+          Vercel (our hosting provider) records standard request metadata, IP address, user agent, request path, response status, timestamp, for security and operational reasons. Logs are retained per Vercel's defaults.
         </p>
       </section>
 
@@ -76,9 +76,9 @@ export default function PrivacyPage() {
         <h2 className="text-xl font-bold text-foreground">Who we share data with</h2>
         <p className="text-foreground leading-relaxed">Only service providers that help us run DevTools Hub:</p>
         <ul className="list-disc pl-6 space-y-1 text-foreground">
-          <li><strong>Stripe, Inc.</strong> — Pro subscription payment processing</li>
-          <li><strong>Vercel Inc.</strong> — hosting and request logs</li>
-          <li><strong>Google LLC</strong> — Google Workspace mailbox (admin@ten30studio.com) for support email</li>
+          <li><strong>Stripe, Inc.</strong>: Pro subscription payment processing</li>
+          <li><strong>Vercel Inc.</strong>: hosting and request logs</li>
+          <li><strong>Google LLC</strong>: Google Workspace mailbox (admin@ten30studio.com) for support email</li>
         </ul>
       </section>
 
@@ -92,10 +92,10 @@ export default function PrivacyPage() {
       <section className="space-y-3">
         <h2 className="text-xl font-bold text-foreground">Retention</h2>
         <ul className="list-disc pl-6 space-y-1 text-foreground">
-          <li><strong>Account data</strong> — kept while your account is active; deleted within 30 days of account closure (except records required for tax/accounting up to 7 years)</li>
-          <li><strong>API request logs</strong> — 90 days, then deleted</li>
-          <li><strong>Subscription records</strong> — at least 7 years (tax / accounting)</li>
-          <li><strong>Hosting logs</strong> — per Vercel's defaults</li>
+          <li><strong>Account data</strong>: kept while your account is active; deleted within 30 days of account closure (except records required for tax/accounting up to 7 years)</li>
+          <li><strong>API request logs</strong>: 90 days, then deleted</li>
+          <li><strong>Subscription records</strong>: at least 7 years (tax / accounting)</li>
+          <li><strong>Hosting logs</strong>: per Vercel's defaults</li>
         </ul>
       </section>
 
@@ -105,7 +105,7 @@ export default function PrivacyPage() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-xl font-bold text-foreground">Your rights (California — CCPA / CPRA)</h2>
+        <h2 className="text-xl font-bold text-foreground">Your rights (California, CCPA / CPRA)</h2>
         <p className="text-foreground leading-relaxed">California residents have the right to know, delete, correct, and opt-out of sale or sharing. <strong>We do not sell or share personal information for cross-context behavioural advertising.</strong> Categories of personal information collected in the past 12 months: identifiers (email, IP), commercial information (subscription records), internet activity (API request metadata). To exercise a California right, email <a href="mailto:admin@ten30studio.com" className="text-accent hover:underline">admin@ten30studio.com</a>.</p>
       </section>
 
@@ -132,7 +132,7 @@ export default function PrivacyPage() {
       </section>
 
       <div className="bg-surface border border-border p-4 text-sm text-muted">
-        <strong className="text-foreground">Draft notice:</strong> this policy is drafted by Ten30 to reflect how DevTools Hub currently operates and addresses common UK GDPR and California CCPA disclosure requirements. It is a starting point, not legal advice — have it reviewed by a qualified attorney before relying on it for compliance in your specific jurisdiction.
+        <strong className="text-foreground">Draft notice:</strong> this policy is drafted by Ten30 to reflect how DevTools Hub currently operates and addresses common UK GDPR and California CCPA disclosure requirements. It is a starting point, not legal advice. Have it reviewed by a qualified attorney before relying on it for compliance in your specific jurisdiction.
       </div>
 
       <p className="text-sm text-muted pt-4">

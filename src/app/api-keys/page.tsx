@@ -79,7 +79,7 @@ export default function ApiKeysPage() {
         </div>
 
         <div className="rounded-xl border border-accent/40 bg-accent/5 p-6">
-          <h2 className="text-lg font-semibold mb-2">Pro Tier — $9/mo</h2>
+          <h2 className="text-lg font-semibold mb-2">Pro Tier, $9/mo</h2>
           <ul className="text-sm text-muted space-y-1 mb-4">
             <li>10,000 requests per hour</li>
             <li>Priority support</li>
@@ -113,12 +113,12 @@ export default function ApiKeysPage() {
             automation systems. Common agent use cases:
           </p>
           <ul className="text-sm text-muted space-y-2">
-            <li><strong>JSON validation</strong> — Validate and format LLM outputs before downstream processing</li>
-            <li><strong>Base64 encoding</strong> — Handle file attachments in agent workflows</li>
-            <li><strong>JWT decoding</strong> — Inspect auth tokens during debugging flows</li>
-            <li><strong>URL encoding</strong> — Build API calls safely in multi-step chains</li>
-            <li><strong>Hash generation</strong> — Create content fingerprints for deduplication</li>
-            <li><strong>Regex testing</strong> — Validate extraction patterns before deployment</li>
+            <li><strong>JSON validation</strong>: Validate and format LLM outputs before downstream processing</li>
+            <li><strong>Base64 encoding</strong>: Handle file attachments in agent workflows</li>
+            <li><strong>JWT decoding</strong>: Inspect auth tokens during debugging flows</li>
+            <li><strong>URL encoding</strong>: Build API calls safely in multi-step chains</li>
+            <li><strong>Hash generation</strong>: Create content fingerprints for deduplication</li>
+            <li><strong>Regex testing</strong>: Validate extraction patterns before deployment</li>
           </ul>
         </div>
       </div>
