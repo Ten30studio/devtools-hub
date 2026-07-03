@@ -98,7 +98,7 @@ export default function ApiKeysPage() {
             Include your API key in the <code className="text-accent">X-API-Key</code> header:
           </p>
           <pre className="bg-background border border-border rounded-lg p-4 text-sm font-mono overflow-x-auto">
-{`curl -X POST https://devtools-hub-ten.vercel.app/api/v1/json/format \\
+{`curl -X POST https://tools.ten30studio.com/api/v1/json/format \\
   -H "Content-Type: application/json" \\
   -H "X-API-Key: ${apiKey || "dth_free_your_key_here"}" \\
   -d '{"input": "{\\"hello\\": \\"world\\"}"}'`}
