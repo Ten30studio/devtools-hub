@@ -8,7 +8,7 @@ export default function SponsorPage() {
       <div className="text-center mb-12">
         <h1 className="text-3xl font-bold mb-4">Support DevTools Hub</h1>
         <p className="text-muted text-lg">
-          DevTools Hub is free and open source. Your support keeps it running
+          DevTools Hub is free. Your support keeps it running
           and funds new tool development.
         </p>
       </div>
@@ -17,10 +17,9 @@ export default function SponsorPage() {
         <div className="rounded-xl border border-accent/40 bg-accent/5 p-8">
           <h2 className="text-xl font-bold mb-2">Pro Supporter ($9/mo)</h2>
           <ul className="text-muted text-sm space-y-2 mb-6">
+            <li>&#10003; 10,000 API requests per hour, up from 100 on the free tier</li>
+            <li>&#10003; Priority on feature requests</li>
             <li>&#10003; Support ongoing development</li>
-            <li>&#10003; Early access to new tools</li>
-            <li>&#10003; Priority feature requests</li>
-            <li>&#10003; API access (coming soon)</li>
           </ul>
           <a
             href="https://buymeacoffee.com/ten30studio"
@@ -48,17 +47,17 @@ export default function SponsorPage() {
         </div>
 
         <div className="rounded-xl border border-border bg-surface p-8">
-          <h2 className="text-xl font-bold mb-2">GitHub Sponsors</h2>
+          <h2 className="text-xl font-bold mb-2">The Code</h2>
           <p className="text-muted text-sm mb-6">
-            Sponsor us on GitHub for monthly or one-time contributions.
+            DevTools Hub is on GitHub. Star it, file an issue, or send a pull request; that helps as much as money does.
           </p>
           <a
-            href="https://github.com/sponsors/Ten30studio"
+            href="https://github.com/Ten30studio/devtools-hub"
             target="_blank"
             rel="noopener noreferrer"
             className="block text-center py-3 rounded-lg text-sm font-medium bg-surface-hover hover:bg-border text-foreground transition-colors"
           >
-            Sponsor on GitHub
+            View on GitHub
           </a>
         </div>
       </div>

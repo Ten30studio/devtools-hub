@@ -83,7 +83,6 @@ export default function ApiKeysPage() {
           <ul className="text-sm text-muted space-y-1 mb-4">
             <li>10,000 requests per hour</li>
             <li>Priority support</li>
-            <li>Usage analytics</li>
           </ul>
           <Link
             href="/sponsor"

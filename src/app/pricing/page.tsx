@@ -23,7 +23,6 @@ const plans = [
       "10,000 API requests / hour",
       "Priority support",
       "API key management",
-      "Usage analytics",
     ],
     cta: "Get Pro Access",
     ctaHref: "/sponsor",
@@ -35,9 +34,8 @@ const plans = [
     period: "",
     features: [
       "Everything in Pro",
-      "Unlimited API requests",
+      "Custom rate limits",
       "Dedicated support",
-      "SLA guarantee",
       "Custom tools & integrations",
     ],
     cta: "Contact Us",
