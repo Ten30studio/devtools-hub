@@ -79,7 +79,7 @@ export default function ApiKeysPage() {
         </div>
 
         <div className="rounded-xl border border-accent/40 bg-accent/5 p-6">
-          <h2 className="text-lg font-semibold mb-2">Pro Tier, $9/mo</h2>
+          <h2 className="text-lg font-semibold mb-2">Pro tier ($9/mo)</h2>
           <ul className="text-sm text-muted space-y-1 mb-4">
             <li>10,000 requests per hour</li>
             <li>Priority support</li>

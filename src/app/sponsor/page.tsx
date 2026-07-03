@@ -15,7 +15,7 @@ export default function SponsorPage() {
 
       <div className="space-y-6">
         <div className="rounded-xl border border-accent/40 bg-accent/5 p-8">
-          <h2 className="text-xl font-bold mb-2">Pro Supporter, $9/mo</h2>
+          <h2 className="text-xl font-bold mb-2">Pro Supporter ($9/mo)</h2>
           <ul className="text-muted text-sm space-y-2 mb-6">
             <li>&#10003; Support ongoing development</li>
             <li>&#10003; Early access to new tools</li>

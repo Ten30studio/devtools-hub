@@ -32,14 +32,14 @@ export default function TermsPage() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-xl font-bold text-foreground">Free tier, "as is", no SLA</h2>
+        <h2 className="text-xl font-bold text-foreground">Free tier: "as is", no SLA</h2>
         <p className="text-foreground leading-relaxed">
           Free tools and the free API tier are provided "as is" and "as available", without warranties of any kind and without any uptime, availability, or performance guarantee. We may rate-limit, suspend, or remove free-tier access at any time for any reason, including operational, security, or abuse-prevention reasons.
         </p>
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-xl font-bold text-foreground">Pro subscription, billing &amp; cancellation</h2>
+        <h2 className="text-xl font-bold text-foreground">Pro subscription: billing &amp; cancellation</h2>
         <ul className="list-disc pl-6 space-y-1 text-foreground">
           <li><strong>Billing</strong>: $9 USD per month, billed in advance at the start of each cycle via Stripe</li>
           <li><strong>Auto-renewal</strong>: subscriptions auto-renew until cancelled</li>

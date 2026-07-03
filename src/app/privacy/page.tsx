@@ -32,7 +32,7 @@ export default function PrivacyPage() {
       <section className="space-y-3">
         <h2 className="text-xl font-bold text-foreground">Free tools, no data leaves your browser</h2>
         <p className="text-foreground leading-relaxed">
-          All 19 utilities (JSON, Base64, JWT, Hash, Regex, Timestamp, Color, UUID, Lorem, Markdown, Diff, Cron, Password, QR Code, YAML, Gradient, HTML Entities, JSON→TS, URL) run entirely client-side in your browser. Whatever you paste, JWTs, JSON payloads, passwords, URLs, stays on your device. We do not collect, transmit, store, or analyse the content you put into the tools.
+          All 19 utilities (JSON, Base64, JWT, Hash, Regex, Timestamp, Color, UUID, Lorem, Markdown, Diff, Cron, Password, QR Code, YAML, Gradient, HTML Entities, JSON→TS, URL) run entirely client-side in your browser. Whatever you paste (JWTs, JSON payloads, passwords, URLs) stays on your device. We do not collect, transmit, store, or analyse the content you put into the tools.
         </p>
       </section>
 
@@ -58,7 +58,7 @@ export default function PrivacyPage() {
       <section className="space-y-3">
         <h2 className="text-xl font-bold text-foreground">Hosting logs</h2>
         <p className="text-foreground leading-relaxed">
-          Vercel (our hosting provider) records standard request metadata, IP address, user agent, request path, response status, timestamp, for security and operational reasons. Logs are retained per Vercel's defaults.
+          Vercel (our hosting provider) records standard request metadata (IP address, user agent, request path, response status, timestamp) for security and operational reasons. Logs are retained per Vercel's defaults.
         </p>
       </section>
 

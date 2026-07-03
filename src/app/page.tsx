@@ -133,18 +133,14 @@ export default function Home() {
             into your agent workflows, CI/CD pipelines, or automation systems.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto mb-8">
           <div className="text-center p-4">
-            <div className="text-2xl font-bold text-accent">19+</div>
+            <div className="text-2xl font-bold text-accent">9</div>
             <div className="text-sm text-muted">API Endpoints</div>
           </div>
           <div className="text-center p-4">
             <div className="text-2xl font-bold text-accent">100/hr</div>
             <div className="text-sm text-muted">Free Requests</div>
-          </div>
-          <div className="text-center p-4">
-            <div className="text-2xl font-bold text-accent">&lt;50ms</div>
-            <div className="text-sm text-muted">Avg Response</div>
           </div>
         </div>
         <div className="flex justify-center gap-3">
