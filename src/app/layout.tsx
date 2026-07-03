@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     description:
       "Free, fast, client-side developer utilities. No sign-up, no tracking, no data leaves your browser.",
     type: "website",
-    url: "https://devtools-hub-ten.vercel.app",
+    url: "https://tools.ten30studio.com",
     siteName: "DevTools Hub",
   },
   twitter: {
